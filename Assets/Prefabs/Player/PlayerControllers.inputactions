@@ -90,7 +90,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "2D Vector",
+                    "name": "Up/Down/Left/Right",
                     "id": "a789470d-652d-4aa0-870b-d2adb6fbb427",
                     "path": "2DVector",
                     "interactions": "",
@@ -146,6 +146,17 @@
                 },
                 {
                     "name": "",
+                    "id": "3134aab1-d14c-495c-ae96-66e7e00d5d3e",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMovements",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "acda0d59-3e8c-4a80-a9d1-a97b42f46cab",
                     "path": "<Keyboard>/leftAlt",
                     "interactions": "",
@@ -157,8 +168,30 @@
                 },
                 {
                     "name": "",
+                    "id": "5f3edeec-9d23-4db7-ad0e-77e707b5d945",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "2b717694-ca1f-4599-933a-52ef3c05530d",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f13076e-81f0-4de2-b799-430eb3e4d57d",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
