@@ -67,10 +67,6 @@ public class PlayerController : MonoBehaviour
         _rb.velocity = direction * _speed;
         _animator.SetFloat("IsWalking", Mathf.Abs(xAxis));
         //Debug.Log($"Definition de l'axe de déplacement : {xAxis}");
-
-    
-        
-
     }
 
     void Jump()
