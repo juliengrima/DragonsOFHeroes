@@ -283,15 +283,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 8651747597680214584}
   _move: {fileID: -6676181861390701293, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
+  _run: {fileID: 6695007592220605996, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
   _jump: {fileID: -3200172367332585969, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
   _fight: {fileID: 6137774003240397, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
   _source: {fileID: 0}
   _AudioFight: {fileID: 0}
   _AudioJump: {fileID: 0}
   _animator: {fileID: 4054921294002253182}
-  graphics: {fileID: 5742427979402193781}
-  _speed: 10
-  _Running: 15
+  PlayerGameObject: {fileID: 2350409590130208185}
+  _speed: 5
+  _Running: 10
   _jumpForce: 10
 --- !u!1 &4598083814509372707
 GameObject:

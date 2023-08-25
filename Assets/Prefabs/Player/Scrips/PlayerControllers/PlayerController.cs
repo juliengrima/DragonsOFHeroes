@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [Header("Actions_Components")]
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] InputActionReference _move;
+    [SerializeField] InputActionReference _run;
     [SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _fight;
     [Header("Audio_Components")]
@@ -18,12 +20,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioClip _AudioJump;
     [Header("Animations_Components")]
     [SerializeField] Animator _animator;
-    [SerializeField] GameObject graphics;
+    [SerializeField] GameObject PlayerGameObject;
     [Header("Actions_Informations")]
     [SerializeField] float _speed;
     [SerializeField] float _Running;
     [SerializeField] float _jumpForce;
 
+    Vector2 velocity;
     bool _isButtonPressed;
     #endregion
     #region Instances
@@ -33,7 +36,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Reset()
     {
-        _speed = 10f;
+        _speed = 5f;
         _Running = 15f;
         _jumpForce = 10f;
     }
@@ -48,27 +51,36 @@ public class PlayerController : MonoBehaviour
 
         Instance = this;
     }
-
     // Update is called once per frame
     void Update()
     {
+        float runXaxis = _move.action.ReadValue<Vector2>().x * _Running;
         float xAxis = _move.action.ReadValue<Vector2>().x * _speed;
-        Mouvements(xAxis);
-        Animators(xAxis);
-        UpdateRotation(xAxis);
+        float yAxis = _move.action.ReadValue<Vector2>().y * _speed;
+        float XYaxis = xAxis + yAxis;
+        Mouvements(XYaxis, xAxis, runXaxis);
         Jump();
         Fight();
+        //Animators(xAxis);
+        UpdateRotation(xAxis);
     }
     #endregion
     #region Methods
-    void Mouvements(float xAxis)
-    {
+    void Mouvements(float XYaxis, float xAxis, float runXaxis)
+    { 
         Vector2 direction = _move.action.ReadValue<Vector2>();
         _rb.velocity = direction * _speed;
-        _animator.SetFloat("IsWalking", Mathf.Abs(xAxis));
-        //Debug.Log($"Definition de l'axe de déplacement : {xAxis}");
-    }
-
+        _animator.SetFloat("IsWalking", Mathf.Abs(XYaxis));
+        //RUNNING
+        _isButtonPressed = _run.action.IsPressed();
+        if (_isButtonPressed)
+        {
+            _rb.velocity = direction * _Running;
+            //Animators(xAxis);
+            //_animator.SetFloat("IsRunning", Mathf.Abs(runXaxis));
+            _animator.SetBool("IsRunningBool", true);
+        }
+    } 
     void Jump()
     {
         _isButtonPressed = _jump.action.WasPressedThisFrame();
@@ -77,7 +89,6 @@ public class PlayerController : MonoBehaviour
         bool isGrounded = gameObject.GetComponentInChildren<GroundChecker>().IsGrounded;
         if (isGrounded)
         {
-
             //Debug.Log("IS PRESSED");
             if (_isButtonPressed)
             {
@@ -87,8 +98,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
-
     void Fight()
     {
         _isButtonPressed = _fight.action.WasPressedThisFrame();
@@ -96,32 +105,29 @@ public class PlayerController : MonoBehaviour
         if (_isButtonPressed)
         {
             _source.PlayOneShot(_AudioFight);
-            _animator.SetTrigger("IsShooting");
-        }
-
-    }
-
-    private void Animators(float xAxis)
-    {
-        if (Mathf.Abs(xAxis) > 10f)
-        {
-            _animator.SetBool("IsRunning", true);
-        }
-        else
-        {
-            _animator.SetBool("IsRunning", false);
+            _animator.SetTrigger("IsFighting");
         }
     }
-
+    //private void Animators(float xAxis)
+    //{
+    //    if (Mathf.Abs(xAxis) > 6f)
+    //    {
+    //        _animator.SetBool("IsRunningBool", true);
+    //    }
+    //    else
+    //    {
+    //        _animator.SetBool("IsRunningBool", false);
+    //    }
+    //}
     private void UpdateRotation(float xAxis)
     {
         if (xAxis > 0)
         {
-            graphics.transform.rotation = Quaternion.Euler(0, 0, 0);
+            PlayerGameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else if (xAxis < 0)
         {
-            graphics.transform.rotation = Quaternion.Euler(0, 180, 0);
+            PlayerGameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
     #endregion
