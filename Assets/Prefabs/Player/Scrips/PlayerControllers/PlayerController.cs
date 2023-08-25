@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject graphics;
     [Header("Actions_Informations")]
     [SerializeField] float _speed;
+    [SerializeField] float _Running;
     [SerializeField] float _jumpForce;
 
     bool _isButtonPressed;
@@ -32,7 +33,8 @@ public class PlayerController : MonoBehaviour
     }
     private void Reset()
     {
-        _speed = 5f;
+        _speed = 10f;
+        _Running = 15f;
         _jumpForce = 10f;
     }
     #endregion
@@ -63,8 +65,11 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 direction = _move.action.ReadValue<Vector2>();
         _rb.velocity = direction * _speed;
-        _animator.SetFloat("Speed", Mathf.Abs(xAxis));
+        _animator.SetFloat("IsWalking", Mathf.Abs(xAxis));
         //Debug.Log($"Definition de l'axe de déplacement : {xAxis}");
+
+    
+        
 
     }
 
@@ -102,7 +107,7 @@ public class PlayerController : MonoBehaviour
 
     private void Animators(float xAxis)
     {
-        if (Mathf.Abs(xAxis) > 0.1f)
+        if (Mathf.Abs(xAxis) > 10f)
         {
             _animator.SetBool("IsRunning", true);
         }

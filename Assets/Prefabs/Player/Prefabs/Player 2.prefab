@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 3320045610700274283}
   - component: {fileID: 9067899145975585886}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -291,7 +291,6 @@ MonoBehaviour:
   _animator: {fileID: 4054921294002253182}
   graphics: {fileID: 5742427979402193781}
   _speed: 10
-  _Running: 15
   _jumpForce: 10
 --- !u!1 &4598083814509372707
 GameObject:
