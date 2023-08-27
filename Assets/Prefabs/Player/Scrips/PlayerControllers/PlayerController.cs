@@ -54,19 +54,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float runXaxis = _move.action.ReadValue<Vector2>().x * _Running;
-        float xAxis = _move.action.ReadValue<Vector2>().x * _speed;
-        float yAxis = _move.action.ReadValue<Vector2>().y * _speed;
-        float XYaxis = xAxis + yAxis;
-        Mouvements(XYaxis, xAxis, runXaxis);
+        //float runXaxis = _run.action.ReadValue<Vector2>().x * _Running; //action running dans axe X uniquement
+        float xAxis = _move.action.ReadValue<Vector2>().x * _speed;     //action move dans axe X uniquement 
+        float yAxis = _move.action.ReadValue<Vector2>().y * _speed;     //action move dans axe y uniquement
+        float XYaxis = xAxis + yAxis;                                   //addition des axes de move
+        //Mouvements(XYaxis, xAxis, runXaxis);
+        Mouvements(XYaxis, xAxis);
         Jump();
         Fight();
-        //Animators(xAxis);
         UpdateRotation(xAxis);
     }
     #endregion
     #region Methods
-    void Mouvements(float XYaxis, float xAxis, float runXaxis)
+    //void Mouvements(float XYaxis, float xAxis, float runXaxis) //xAxis et runAxis pour tester differentes versions
+    void Mouvements(float XYaxis, float xAxis) //xAxis et runAxis pour tester differentes versions
     { 
         Vector2 direction = _move.action.ReadValue<Vector2>();
         _rb.velocity = direction * _speed;
@@ -77,7 +78,7 @@ public class PlayerController : MonoBehaviour
         {
             _rb.velocity = direction * _Running;
             //Animators(xAxis);
-            //_animator.SetFloat("IsRunning", Mathf.Abs(runXaxis));
+            //_animator.SetFloat("IsRunning", Mathf.Abs(runXaxis));  
             _animator.SetBool("IsRunningBool", true);
         }
     } 
@@ -105,7 +106,7 @@ public class PlayerController : MonoBehaviour
         if (_isButtonPressed)
         {
             _source.PlayOneShot(_AudioFight);
-            _animator.SetTrigger("IsFighting");
+            _animator.SetBool("IsFighting", true);
         }
     }
     //private void Animators(float xAxis)
