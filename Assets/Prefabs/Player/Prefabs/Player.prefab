@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3104513698728664065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Physics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 8706290948976931460}
   - component: {fileID: 4054921294002253182}
   - component: {fileID: 4992456523325567486}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Animations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,9 +151,9 @@ GameObject:
   - component: {fileID: 6150046011665970599}
   - component: {fileID: 3320045610700274283}
   - component: {fileID: 9067899145975585886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,7 +293,6 @@ MonoBehaviour:
   PlayerGameObject: {fileID: 2350409590130208185}
   _speed: 5
   _Running: 8
-  _jumpForce: 10
 --- !u!1 &4598083814509372707
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 159015487694251819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Audios
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6360032901285856809}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1562450235686876472}
   - component: {fileID: 1324639518905689111}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 6744235290963795160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6360032901285856809}
@@ -451,7 +450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8792987165409445538}
   - component: {fileID: 1592218935412850460}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
