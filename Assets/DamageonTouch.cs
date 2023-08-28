@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class DamageOnTouch : MonoBehaviour
 {
-    [SerializeField] int _damageAmount;
+    [Header("Fields")]
+    [SerializeField] int _damageAmount = 10;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Health pc) && pc.IsPlayer)
+        // Component
+        //EnemyTag tag = collision.gameObject.GetComponent<EnemyTag>();
+        if (collision.attachedRigidbody == null) return;
+        //if (tag != null)
+        if (collision.CompareTag("Player"))
         {
-
-            pc.TakeDamage(_damageAmount);
-            Destroy(gameObject);
-
+            // VERIFICATION DES COLLIDERS DU RIGIDBODY DE HUMAN
+            if (collision.attachedRigidbody.TryGetComponent(out Health health))
+            {
+                health.TakeDamage(_damageAmount);
+                //Destroy(gameObject);
+            }
         }
-
-
     }
 }

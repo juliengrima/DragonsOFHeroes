@@ -51,17 +51,14 @@ public class Health : MonoBehaviour
             if (_isPlayer == true)
             {
                 //ScoreManager.Instance.DeleteScore(_scoreOnDeath * 2);
-                StartCoroutine(loadingScene());
-                
+                StartCoroutine(loadingScene());    
             }
             else
             {
                 //ScoreManager.Instance.AddScore(_scoreOnDeath);
                 StartCoroutine(EnableDestroyAfterDelay());
             }
-
             _effect.Invoke();
-            
         }
     }
     public void GiveLife(int amount)
