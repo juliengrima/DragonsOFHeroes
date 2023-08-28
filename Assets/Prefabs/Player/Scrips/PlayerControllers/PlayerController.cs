@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [Header("Actions_Components")]
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] InputActionReference _move;
+    [SerializeField] InputActionReference _run;
     [SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _fight;
     [Header("Audio_Components")]
@@ -18,12 +20,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioClip _AudioJump;
     [Header("Animations_Components")]
     [SerializeField] Animator _animator;
-    [SerializeField] GameObject graphics;
+    [SerializeField] GameObject PlayerGameObject;
     [Header("Actions_Informations")]
     [SerializeField] float _speed;
     [SerializeField] float _Running;
-    [SerializeField] float _jumpForce;
 
+    Vector2 velocity;
     bool _isButtonPressed;
     #endregion
     #region Instances
@@ -33,9 +35,8 @@ public class PlayerController : MonoBehaviour
     }
     private void Reset()
     {
-        _speed = 10f;
-        _Running = 15f;
-        _jumpForce = 10f;
+        _speed = 5f;
+        _Running = 8f;
     }
     #endregion
     #region LifeCycle
@@ -48,91 +49,75 @@ public class PlayerController : MonoBehaviour
 
         Instance = this;
     }
-
     // Update is called once per frame
     void Update()
     {
-        float xAxis = _move.action.ReadValue<Vector2>().x * _speed;
-        Mouvements(xAxis);
-        Animators(xAxis);
-        UpdateRotation(xAxis);
+        float xAxis = _move.action.ReadValue<Vector2>().x * _speed;     //action move dans axe X uniquement
+        float yAxis = _move.action.ReadValue<Vector2>().y * _speed;     //action move dans axe y uniquement
+        float XYaxis = xAxis + yAxis;                                   //addition des axes de move pour l'animation
+        Mouvements(XYaxis);
         Jump();
         Fight();
+        UpdateRotation(xAxis);
     }
     #endregion
     #region Methods
-    void Mouvements(float xAxis)
-    {
+    void Mouvements(float XYaxis)
+    { 
         Vector2 direction = _move.action.ReadValue<Vector2>();
         _rb.velocity = direction * _speed;
-        _animator.SetFloat("IsWalking", Mathf.Abs(xAxis));
-        //Debug.Log($"Definition de l'axe de déplacement : {xAxis}");
-
-    
-        
-
-    }
-
-    void Jump()
-    {
-        _isButtonPressed = _jump.action.WasPressedThisFrame();
-        //_isButtonPressed = _jump.action.IsPressed();
-        //bool isGrounded = GroundChecker.IsGrounded;
-        bool isGrounded = gameObject.GetComponentInChildren<GroundChecker>().IsGrounded;
-        if (isGrounded)
-        {
-
-            //Debug.Log("IS PRESSED");
-            if (_isButtonPressed)
-            {
-                _rb.AddForce(Vector2.up * _jumpForce);
-                _source.PlayOneShot(_AudioJump);
-                _animator.SetBool("IsJumping", true);
-            }
-        }
-    }
-
-
-    void Fight()
-    {
-        _isButtonPressed = _fight.action.WasPressedThisFrame();
-        //Debug.Log("IS PRESSED");
+        _animator.SetFloat("IsWalking", Mathf.Abs(XYaxis));
+        //RUNNING
+        _isButtonPressed = _run.action.IsPressed();
         if (_isButtonPressed)
         {
-            _source.PlayOneShot(_AudioFight);
-            _animator.SetTrigger("IsShooting");
-        }
-
-    }
-
-    private void Animators(float xAxis)
-    {
-        if (Mathf.Abs(xAxis) > 10f)
-        {
-            _animator.SetBool("IsRunning", true);
+            _rb.velocity = direction * _Running;
+            _animator.SetBool("IsRunningBool", true);   
         }
         else
         {
-            _animator.SetBool("IsRunning", false);
+            _animator.SetBool("IsRunningBool", false);
         }
     }
-
-    private void UpdateRotation(float xAxis)
+    void Jump()
+    {
+        _isButtonPressed = _jump.action.WasPressedThisFrame();
+        if (_isButtonPressed)
+        {
+            //_rb.AddForce(Vector2.up * _jumpForce);
+            _source.PlayOneShot(_AudioJump);
+            _animator.SetBool("IsJumping", true);
+        }
+        else
+        {
+            _animator.SetBool("IsJumping", false);
+        }
+    }
+    void Fight()
+    {
+        _isButtonPressed = _fight.action.WasPressedThisFrame();
+        if (_isButtonPressed)
+        {
+            _source.PlayOneShot(_AudioFight);
+            _animator.SetBool("IsFighting", true);
+        }
+        else
+        {
+            _animator.SetBool("IsFighting", false);
+        }
+    }
+    void UpdateRotation(float xAxis)
     {
         if (xAxis > 0)
         {
-            graphics.transform.rotation = Quaternion.Euler(0, 0, 0);
+            PlayerGameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else if (xAxis < 0)
         {
-            graphics.transform.rotation = Quaternion.Euler(0, 180, 0);
+            PlayerGameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
     #endregion
     #region Coroutines
     #endregion
-    //void GetNextWeaponByKey(InputAction.CallbackContext obj)
-    //{
-    //    throw new NotImplementedException();
-    //}
 }

@@ -14,14 +14,14 @@ TagManager:
   - Water
   - UI
   - 
+  - Player
+  - Enemy
+  - PNJ
   - 
+  - destructible
+  - Undestructible
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Boss
   - 
   - 
   - 
@@ -42,4 +42,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background1
+    uniqueID: 3945633475
+    locked: 0
+  - name: Background2
+    uniqueID: 3641056623
+    locked: 0
+  - name: Background3
+    uniqueID: 3475995863
+    locked: 0
+  - name: Background4
+    uniqueID: 2928597373
+    locked: 0
+  - name: Background5
+    uniqueID: 424533841
     locked: 0
