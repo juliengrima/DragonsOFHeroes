@@ -14,12 +14,12 @@ public class Attack_1_ColDisabled : MonoBehaviour
     #region Methods
     public void ColEnabled()
     {
-        var collider = gameObject.GetComponent<Collider2D>();
+        var collider = gameObject.GetComponentInChildren<CircleCollider2D>();
         collider.enabled = true;
     }
     void ColDisabled()
     {
-        var collider = gameObject.GetComponent<Collider2D>();
+        var collider = gameObject.GetComponentInChildren<CircleCollider2D>();
         collider.enabled = false;
     }
     #endregion
