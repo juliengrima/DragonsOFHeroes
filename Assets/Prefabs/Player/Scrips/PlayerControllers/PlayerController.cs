@@ -76,10 +76,14 @@ public class PlayerController : MonoBehaviour
             _rb.velocity = direction * _Running;
             _animator.SetBool("IsRunningBool", true);   
         }
+        else
+        {
+            _animator.SetBool("IsRunningBool", false);
+        }
     }
     //void Run()
     //{
-        
+
     //}
     void Jump()
     {
@@ -100,17 +104,6 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("IsFighting", true);
         }
     }
-    //void Animators(float XYaxis, float _running)
-    //{
-    //    if (Mathf.Abs(XYaxis + _running) > 6f)
-    //    {
-    //        _animator.SetBool("IsRunningBool", true);
-    //    }
-    //    else
-    //    {
-    //        _animator.SetBool("IsRunningBool", false);
-    //    }
-    //}
     void UpdateRotation(float xAxis)
     {
         if (xAxis > 0)
