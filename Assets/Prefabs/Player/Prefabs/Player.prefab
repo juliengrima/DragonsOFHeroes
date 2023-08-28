@@ -292,7 +292,7 @@ MonoBehaviour:
   _animator: {fileID: 4054921294002253182}
   PlayerGameObject: {fileID: 2350409590130208185}
   _speed: 5
-  _Running: 10
+  _Running: 8
   _jumpForce: 10
 --- !u!1 &4598083814509372707
 GameObject:

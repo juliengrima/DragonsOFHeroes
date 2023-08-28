@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     [Header("Actions_Informations")]
     [SerializeField] float _speed;
     [SerializeField] float _Running;
-    [SerializeField] float _jumpForce;
 
     Vector2 velocity;
     bool _isButtonPressed;
@@ -37,8 +36,7 @@ public class PlayerController : MonoBehaviour
     private void Reset()
     {
         _speed = 5f;
-        _Running = 15f;
-        _jumpForce = 10f;
+        _Running = 8f;
     }
     #endregion
     #region LifeCycle
@@ -54,19 +52,19 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float runXaxis = _move.action.ReadValue<Vector2>().x * _Running;
-        float xAxis = _move.action.ReadValue<Vector2>().x * _speed;
-        float yAxis = _move.action.ReadValue<Vector2>().y * _speed;
-        float XYaxis = xAxis + yAxis;
-        Mouvements(XYaxis, xAxis, runXaxis);
+        float xAxis = _move.action.ReadValue<Vector2>().x * _speed;     //action move dans axe X uniquement 
+        float yAxis = _move.action.ReadValue<Vector2>().y * _speed;     //action move dans axe y uniquement
+        float XYaxis = xAxis + yAxis;                                   //addition des axes de move
+        //Mouvements(XYaxis, xAxis, runXaxis);
+        Mouvements(XYaxis);
+        //Run();
         Jump();
         Fight();
-        //Animators(xAxis);
         UpdateRotation(xAxis);
     }
     #endregion
     #region Methods
-    void Mouvements(float XYaxis, float xAxis, float runXaxis)
+    void Mouvements(float XYaxis)
     { 
         Vector2 direction = _move.action.ReadValue<Vector2>();
         _rb.velocity = direction * _speed;
@@ -76,50 +74,37 @@ public class PlayerController : MonoBehaviour
         if (_isButtonPressed)
         {
             _rb.velocity = direction * _Running;
-            //Animators(xAxis);
-            //_animator.SetFloat("IsRunning", Mathf.Abs(runXaxis));
-            _animator.SetBool("IsRunningBool", true);
+            _animator.SetBool("IsRunningBool", true);   
         }
-    } 
+        else
+        {
+            _animator.SetBool("IsRunningBool", false);
+        }
+    }
+    //void Run()
+    //{
+
+    //}
     void Jump()
     {
         _isButtonPressed = _jump.action.WasPressedThisFrame();
-        //_isButtonPressed = _jump.action.IsPressed();
-        //bool isGrounded = GroundChecker.IsGrounded;
-        bool isGrounded = gameObject.GetComponentInChildren<GroundChecker>().IsGrounded;
-        if (isGrounded)
+        if (_isButtonPressed)
         {
-            //Debug.Log("IS PRESSED");
-            if (_isButtonPressed)
-            {
-                _rb.AddForce(Vector2.up * _jumpForce);
-                _source.PlayOneShot(_AudioJump);
-                _animator.SetBool("IsJumping", true);
-            }
-        }
+            //_rb.AddForce(Vector2.up * _jumpForce);
+            _source.PlayOneShot(_AudioJump);
+            _animator.SetBool("IsJumping", true);
+        }  
     }
     void Fight()
     {
         _isButtonPressed = _fight.action.WasPressedThisFrame();
-        //Debug.Log("IS PRESSED");
         if (_isButtonPressed)
         {
             _source.PlayOneShot(_AudioFight);
-            _animator.SetTrigger("IsFighting");
+            _animator.SetBool("IsFighting", true);
         }
     }
-    //private void Animators(float xAxis)
-    //{
-    //    if (Mathf.Abs(xAxis) > 6f)
-    //    {
-    //        _animator.SetBool("IsRunningBool", true);
-    //    }
-    //    else
-    //    {
-    //        _animator.SetBool("IsRunningBool", false);
-    //    }
-    //}
-    private void UpdateRotation(float xAxis)
+    void UpdateRotation(float xAxis)
     {
         if (xAxis > 0)
         {
