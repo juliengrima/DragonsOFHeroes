@@ -10,18 +10,15 @@ public class Health : MonoBehaviour
     [Header("Health")]
     [SerializeField] int _startHealth;
     [SerializeField] int _startHealthMax;
-
     [Header("Scores")]
     [SerializeField] int _scoreOnDeath;
     [SerializeField] int _scoreOnLife;
     [SerializeField] bool _isPlayer = false;
-
     [Header("Effects")]
     [SerializeField] float disableDuration = 1f;
     [SerializeField] UnityEvent _effect;
 
     public bool IsDammageable { get; set; }
-
     #endregion
     #region Unity LifeCycle
     private void Reset()
@@ -54,17 +51,14 @@ public class Health : MonoBehaviour
             if (_isPlayer == true)
             {
                 //ScoreManager.Instance.DeleteScore(_scoreOnDeath * 2);
-                StartCoroutine(loadingScene());
-                
+                StartCoroutine(loadingScene());    
             }
             else
             {
                 //ScoreManager.Instance.AddScore(_scoreOnDeath);
                 StartCoroutine(EnableDestroyAfterDelay());
             }
-
             _effect.Invoke();
-            
         }
     }
     public void GiveLife(int amount)
