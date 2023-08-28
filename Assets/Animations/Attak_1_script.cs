@@ -5,32 +5,17 @@ using UnityEngine;
 public class Attak_1_script : MonoBehaviour
 {	
     #region Champs
+    bool _collider2d;
     #endregion
     #region Unity LifeCycle
     // Start is called before the first frame update
-    void Awake()
-    {
-        
-    }
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     #endregion
     #region Methods
-    void FixedUpdate ()
+    void Events()
     {
-        
-    }
-    void LateUpdate ()
-    {
-        
+        var collider = gameObject.GetComponent<Collider2D>();
+        collider.enabled = true;
     }
     #endregion
     #region Coroutines
