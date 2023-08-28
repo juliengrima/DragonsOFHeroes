@@ -10,18 +10,15 @@ public class Health : MonoBehaviour
     [Header("Health")]
     [SerializeField] int _startHealth;
     [SerializeField] int _startHealthMax;
-
     [Header("Scores")]
     [SerializeField] int _scoreOnDeath;
     [SerializeField] int _scoreOnLife;
     [SerializeField] bool _isPlayer = false;
-
     [Header("Effects")]
     [SerializeField] float disableDuration = 1f;
     [SerializeField] UnityEvent _effect;
 
     public bool IsDammageable { get; set; }
-
     #endregion
     #region Unity LifeCycle
     private void Reset()
