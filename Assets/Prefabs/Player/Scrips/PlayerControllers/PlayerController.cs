@@ -52,12 +52,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xAxis = _move.action.ReadValue<Vector2>().x * _speed;     //action move dans axe X uniquement 
+        float xAxis = _move.action.ReadValue<Vector2>().x * _speed;     //action move dans axe X uniquement
         float yAxis = _move.action.ReadValue<Vector2>().y * _speed;     //action move dans axe y uniquement
-        float XYaxis = xAxis + yAxis;                                   //addition des axes de move
-        //Mouvements(XYaxis, xAxis, runXaxis);
+        float XYaxis = xAxis + yAxis;                                   //addition des axes de move pour l'animation
         Mouvements(XYaxis);
-        //Run();
         Jump();
         Fight();
         UpdateRotation(xAxis);
@@ -81,10 +79,6 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("IsRunningBool", false);
         }
     }
-    //void Run()
-    //{
-
-    //}
     void Jump()
     {
         _isButtonPressed = _jump.action.WasPressedThisFrame();
@@ -93,7 +87,11 @@ public class PlayerController : MonoBehaviour
             //_rb.AddForce(Vector2.up * _jumpForce);
             _source.PlayOneShot(_AudioJump);
             _animator.SetBool("IsJumping", true);
-        }  
+        }
+        else
+        {
+            _animator.SetBool("IsJumping", false);
+        }
     }
     void Fight()
     {
@@ -102,6 +100,10 @@ public class PlayerController : MonoBehaviour
         {
             _source.PlayOneShot(_AudioFight);
             _animator.SetBool("IsFighting", true);
+        }
+        else
+        {
+            _animator.SetBool("IsFighting", false);
         }
     }
     void UpdateRotation(float xAxis)
@@ -118,8 +120,4 @@ public class PlayerController : MonoBehaviour
     #endregion
     #region Coroutines
     #endregion
-    //void GetNextWeaponByKey(InputAction.CallbackContext obj)
-    //{
-    //    throw new NotImplementedException();
-    //}
 }
