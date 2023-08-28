@@ -83,3 +83,10 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.2
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 5a93cb65e7f134923941bf51c6e7cb2b, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

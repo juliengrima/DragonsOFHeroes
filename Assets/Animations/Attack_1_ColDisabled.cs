@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attak_1_script : MonoBehaviour
-{	
+public class Attack_1_ColDisabled : MonoBehaviour
+{
     #region Champs
     bool _collider2d;
     #endregion
@@ -12,10 +12,15 @@ public class Attak_1_script : MonoBehaviour
     // Update is called once per frame
     #endregion
     #region Methods
-    void Events()
+    public void ColEnabled()
     {
         var collider = gameObject.GetComponent<Collider2D>();
         collider.enabled = true;
+    }
+    void ColDisabled()
+    {
+        var collider = gameObject.GetComponent<Collider2D>();
+        collider.enabled = false;
     }
     #endregion
     #region Coroutines
