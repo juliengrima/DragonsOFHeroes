@@ -1,8 +1,6 @@
-using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     // The Rigidbody 2D component for the player.
@@ -12,7 +10,7 @@ public class Player : MonoBehaviour
     private float birthTime;
 
     // The duration of the player's life in seconds.
-    private float lifeTime = 60f;
+    private float lifeTime = 120f;
 
     // The UI TextMesh Pro component for the timer.
     public TextMeshProUGUI timer;
@@ -32,12 +30,12 @@ public class Player : MonoBehaviour
         float t = Time.time - birthTime;
         if (t < lifeTime)
         {
-            rb.AddForce(transform.right * Input.GetAxisRaw("Horizontal"));
         }
         else
         {
             // If the player is dead, destroy it.
             Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         // Update the timer.
