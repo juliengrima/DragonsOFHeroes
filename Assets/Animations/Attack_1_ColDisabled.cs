@@ -6,6 +6,7 @@ public class Attack_1_ColDisabled : MonoBehaviour
 {
     #region Champs
     bool _collider2d;
+    [SerializeField] GameObject _body;
     #endregion
     #region Unity LifeCycle
     // Start is called before the first frame update
@@ -20,6 +21,16 @@ public class Attack_1_ColDisabled : MonoBehaviour
     void ColDisabled()
     {
         var collider = gameObject.GetComponentInChildren<CircleCollider2D>();
+        collider.enabled = false;
+    }
+    void PlayerBodyColliderEnabled()
+    {
+        var collider = _body.GetComponent<CapsuleCollider2D>();
+        collider.enabled = true;
+    }
+    void PlayerBodyColliderDisabled()
+    {
+        var collider = _body.GetComponent<CapsuleCollider2D>();
         collider.enabled = false;
     }
     #endregion
