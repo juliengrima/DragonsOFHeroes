@@ -14,10 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference _run;
     [SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _fight;
-    [Header("Audio_Components")]
-    [SerializeField] AudioSource _source;
-    [SerializeField] AudioClip _AudioFight;
-    [SerializeField] AudioClip _AudioJump;
+    [SerializeField] Audios _audios;
     [Header("Animations_Components")]
     [SerializeField] Animator _animator;
     [SerializeField] GameObject PlayerGameObject;
@@ -27,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     Vector2 velocity;
     bool _isButtonPressed;
+    private int fightCounter = 0;
     #endregion
     #region Instances
     public static PlayerController Instance 
@@ -44,7 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Instance != null)
         {
-            //Debug.LogError("OMG");
+            Debug.LogError("OMG");
         }
 
         Instance = this;
@@ -66,7 +64,16 @@ public class PlayerController : MonoBehaviour
     { 
         Vector2 direction = _move.action.ReadValue<Vector2>();
         _rb.velocity = direction * _speed;
-        _animator.SetFloat("IsWalking", Mathf.Abs(XYaxis));
+        _animator.SetFloat("MoveSpeed", Mathf.Abs(XYaxis));
+
+        if (direction.magnitude < 0)
+        {
+            _animator.SetFloat("MoveSpeed", Mathf.Abs(XYaxis));
+        }
+        else if (direction.magnitude > 0)
+        {
+            _animator.SetFloat("MoveSpeed", Mathf.Abs(XYaxis));
+        }
         //RUNNING
         _isButtonPressed = _run.action.IsPressed();
         if (_isButtonPressed)
@@ -84,8 +91,7 @@ public class PlayerController : MonoBehaviour
         _isButtonPressed = _jump.action.WasPressedThisFrame();
         if (_isButtonPressed)
         {
-            //_rb.AddForce(Vector2.up * _jumpForce);
-            _source.PlayOneShot(_AudioJump);
+            _audios.Jump();
             _animator.SetBool("IsJumping", true);
         }
         else
@@ -98,12 +104,26 @@ public class PlayerController : MonoBehaviour
         _isButtonPressed = _fight.action.WasPressedThisFrame();
         if (_isButtonPressed)
         {
-            _source.PlayOneShot(_AudioFight);
-            _animator.SetBool("IsFighting", true);
-        }
-        else
-        {
-            _animator.SetBool("IsFighting", false);
+            _animator.SetTrigger("IsFighting");
+
+            if (fightCounter == 3) fightCounter = 0;
+
+            fightCounter++;
+            if (fightCounter == 1)
+            {
+                _audios.Attack(1);
+                _animator.SetInteger("AttackNumber", 1);
+            }
+            else if (fightCounter == 2)
+            {
+                _audios.Attack(2);
+                _animator.SetInteger("AttackNumber", 2);
+            }
+            else if (fightCounter == 3)
+            {
+                _audios.Attack(3);
+                _animator.SetInteger("AttackNumber", 3);
+            }
         }
     }
     void UpdateRotation(float xAxis)
