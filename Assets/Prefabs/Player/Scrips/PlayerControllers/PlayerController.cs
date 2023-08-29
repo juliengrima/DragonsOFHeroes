@@ -24,7 +24,8 @@ public class PlayerController : MonoBehaviour
 
     Vector2 velocity;
     bool _isButtonPressed;
-    private int fightCounter = 0;
+    int fightCounter = 0;
+    int _jumpCounter = 3;
     #endregion
     #region Instances
     public static PlayerController Instance 
@@ -92,11 +93,15 @@ public class PlayerController : MonoBehaviour
         if (_isButtonPressed)
         {
             _audios.Jump();
-            _animator.SetBool("IsJumping", true);
+            _animator.SetTrigger("IsJumping");
+            for (int i = 0; i < _jumpCounter; i++)
+            {
+                _animator.SetInteger("JumpNumber", i);
+            }
         }
         else
         {
-            _animator.SetBool("IsJumping", false);
+            //_animator.SetBool("IsJumping", false);
         }
     }
     void Fight()
