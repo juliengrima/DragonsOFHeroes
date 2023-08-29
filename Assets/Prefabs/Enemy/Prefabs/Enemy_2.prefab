@@ -230,8 +230,6 @@ GameObject:
   - component: {fileID: 4367566142699301543}
   - component: {fileID: 417360350724979561}
   - component: {fileID: 993749540787089896}
-  - component: {fileID: 4653838077292766554}
-  - component: {fileID: 2061638409581699079}
   m_Layer: 0
   m_Name: Enemy_2
   m_TagString: Untagged
@@ -320,59 +318,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!114 &4653838077292766554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7680921614263254409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Controllers
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &2061638409581699079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7680921614263254409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb66e5bad4803ba4e84b9cda7e21b22c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rb: {fileID: 417360350724979561}
-  _move: {fileID: -6676181861390701293, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
-  _jump: {fileID: -3200172367332585969, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
-  _fight: {fileID: 6137774003240397, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
-  _source: {fileID: 0}
-  _AudioFight: {fileID: 0}
-  _AudioJump: {fileID: 0}
-  _animator: {fileID: 5871958701378641677}
-  graphics: {fileID: 2769872425369378508}
-  _speed: 10
-  _jumpForce: 10
 --- !u!1 &9219247099269971419
 GameObject:
   m_ObjectHideFlags: 0

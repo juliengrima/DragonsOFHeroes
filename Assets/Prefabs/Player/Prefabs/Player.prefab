@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _body: {fileID: 7749909921502227885}
+  _attack: {fileID: 1398004515935778899}
 --- !u!1 &2350409590130208185
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +191,7 @@ Transform:
   - {fileID: 3104513698728664065}
   - {fileID: 159015487694251819}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8651747597680214584
 Rigidbody2D:
@@ -302,6 +303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 994950199143151105}
   - component: {fileID: 1321295597361992293}
+  - component: {fileID: 7053694057822874749}
   m_Layer: 7
   m_Name: Attack_1
   m_TagString: Player
@@ -359,6 +361,19 @@ CircleCollider2D:
   m_Offset: {x: 0.6020992, y: -0.20416003}
   serializedVersion: 2
   m_Radius: 0.17126769
+--- !u!114 &7053694057822874749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2679168766217528180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa496199b27f041889cc6415fc91534e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 50
 --- !u!1 &4598083814509372707
 GameObject:
   m_ObjectHideFlags: 0
