@@ -77,16 +77,16 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.1
-    functionName: 
+    functionName: ColEnabled
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 60b47ac25fc31452a81aa06611c42015, type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.2
-    functionName: 
+    functionName: ColDisabled
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 5a93cb65e7f134923941bf51c6e7cb2b, type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
