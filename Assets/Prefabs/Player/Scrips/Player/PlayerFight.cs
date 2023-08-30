@@ -14,9 +14,11 @@ public class PlayerFight : MonoBehaviour
     #region Methods
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.attachedRigidbody == null) return;
 
-        if (collision.TryGetComponent(out Health health))
+        if (collision.attachedRigidbody.CompareTag("Enemy"))
         {
+            collision.attachedRigidbody.GetComponent<Health>().IsDammageable = true;
             health.TakeDamage(_damage);
             Destroy(gameObject);
         }
