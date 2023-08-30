@@ -49,27 +49,38 @@ public class EnemymoveVs2 : MonoBehaviour
 
         if (dir.magnitude > 0)    // Direction de la magnitude au carré triangle rectancle pythagore
         {
-            _animator.SetBool("Idle", true);
+            _animator.SetFloat("Idle",0 );
         }
 
         else
 
 
         {
-            _animator.SetBool("Idle", false);
+            _animator.SetFloat("Idle", 0);
         }
 
 
         if (dir.magnitude > 0)    // Direction de la magnitude au carré triangle rectancle pythagore
         {
-            _animator.SetBool("Walk", true);
+            _animator.SetFloat("Walk", 5);
         }
 
         else
 
 
         {
-            _animator.SetBool("Walk", false);
+            _animator.SetFloat("Walk", 10);
+        }
+        if (dir.magnitude > 0)    // Direction de la magnitude au carré triangle rectancle pythagore
+        {
+            _animator.SetFloat("Attack1", 10);
+        }
+
+        else
+
+
+        {
+            _animator.SetFloat("Attack1", 10);
         }
 
     }

@@ -73,6 +73,8 @@ public class EnemyMove : MonoBehaviour
             _animator.SetBool("Walk", false);
         }
 
+
+
     }
 
 }
