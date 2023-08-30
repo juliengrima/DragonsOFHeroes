@@ -21,8 +21,8 @@ public class CharacterAttack : MonoBehaviour
         if (_attackInput.action.WasPressedThisFrame())
         {
 
-            // C'est le cas on parcours la liste des colliders détectés
-            //Et sur chaque collider on choppe le copsant Health et on appelle
+            // C'est le cas où on parcours la liste des colliders détectés
+            //Et sur chaque collider on choppe le composant Health et on appelle
             //takeDamage dessus.
 
 
