@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference _run;
     [SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _fight;
+    [SerializeField] Attack_1_ColDisabled _fightCollider2D;
     [SerializeField] Audios _audios;
     [Header("Animations_Components")]
     [SerializeField] Animator _animator;
@@ -93,6 +94,7 @@ public class PlayerController : MonoBehaviour
         if (_isButtonPressed)
         {
             _audios.Jump();
+            _fightCollider2D.ColBodyDisabled();
             _animator.SetTrigger("IsJumping");
             for (int i = 0; i < _jumpCounter; i++)
             {
@@ -101,7 +103,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            //_animator.SetBool("IsJumping", false);
+            _fightCollider2D.ColBodyEnabled();
         }
     }
     void Fight()
@@ -114,6 +116,7 @@ public class PlayerController : MonoBehaviour
             if (fightCounter == 3) fightCounter = 0;
 
             fightCounter++;
+            StartCoroutine(ColEnableThenDisable());
             if (fightCounter == 1)
             {
                 _audios.Attack(1);
@@ -123,11 +126,13 @@ public class PlayerController : MonoBehaviour
             {
                 _audios.Attack(2);
                 _animator.SetInteger("AttackNumber", 2);
+                
             }
             else if (fightCounter == 3)
             {
                 _audios.Attack(3);
                 _animator.SetInteger("AttackNumber", 3);
+                
             }
         }
     }
@@ -144,5 +149,13 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
     #region Coroutines
+    IEnumerator ColEnableThenDisable()
+    {
+        yield return new WaitForFixedUpdate();
+        _fightCollider2D.ColEnabled();
+
+        yield return new WaitForFixedUpdate();
+        _fightCollider2D.ColDisabled();
+    }
     #endregion
 }

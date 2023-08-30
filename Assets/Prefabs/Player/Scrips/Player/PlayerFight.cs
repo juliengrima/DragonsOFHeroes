@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerFight : MonoBehaviour
 {
     #region Champs
-    [SerializeField] int _damage;
     #endregion
     #region Unity LifeCycle
     // Start is called before the first frame update
@@ -16,11 +15,18 @@ public class PlayerFight : MonoBehaviour
     {
         if (collision.attachedRigidbody == null) return;
 
-        if (collision.attachedRigidbody.CompareTag("Enemy"))
+        if (collision.attachedRigidbody.gameObject.CompareTag("Enemy") || collision.attachedRigidbody.gameObject.CompareTag("Boss"))
         {
             collision.attachedRigidbody.GetComponent<Health>().IsDammageable = true;
-            health.TakeDamage(_damage);
-            Destroy(gameObject);
+        }    
+    }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.attachedRigidbody == null) return;
+
+        if (collision.attachedRigidbody.gameObject.CompareTag("Enemy") || collision.attachedRigidbody.gameObject.CompareTag("Boss"))
+        {
+            collision.attachedRigidbody.GetComponent<Health>().IsDammageable = false;
         }
     }
     #endregion

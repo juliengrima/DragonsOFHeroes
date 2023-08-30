@@ -12,16 +12,19 @@ public class CharacterAttack : MonoBehaviour
     [SerializeField] Animator _animator;
     [SerializeField] AudioSource _punchSound;
 
+    [Header("Fields")]
+    [SerializeField] int _damage;
+
     private void Update()
     {
 
 
-        //On check le bouton d' atttack quivient d'être enfoncé
+        //On check le bouton d' atttack quivient d'ï¿½tre enfoncï¿½
 
         if (_attackInput.action.WasPressedThisFrame())
         {
 
-            // C'est le cas où on parcours la liste des colliders détectés
+            // C'est le cas oï¿½ on parcours la liste des colliders dï¿½tectï¿½s
             //Et sur chaque collider on choppe le composant Health et on appelle
             //takeDamage dessus.
 
@@ -31,10 +34,10 @@ public class CharacterAttack : MonoBehaviour
 
                 Debug.Log($"attack {col.attachedRigidbody.name}");
 
-                //Le composant Health est au même endroit que le RB de notre enemi
+                //Le composant Health est au mï¿½me endroit que le RB de notre enemi
 
                 Health h = col.attachedRigidbody.GetComponent<Health>();
-                h.TakeDamage();
+                h.TakeDamage(_damage);
 
                 {
 

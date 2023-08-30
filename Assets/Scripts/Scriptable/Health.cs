@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     #region Champs
+    [Header("Components")]
+    [SerializeField] HealthBar _healthBar;
     [Header("Health")]
     [SerializeField] int _startHealth;
     [SerializeField] int _startHealthMax;
@@ -38,6 +40,7 @@ public class Health : MonoBehaviour
     private void Start()
     {
         _effect.Invoke();
+        _healthBar.SetMaxHealth(_startHealthMax);
     }
     #endregion
     #region Methods
@@ -46,6 +49,7 @@ public class Health : MonoBehaviour
         if (IsDammageable == false) return;
 
         _startHealth -= amount;
+        _healthBar.SetHealth(_startHealth);
 
         if (_startHealth <= 0)
         {
@@ -87,11 +91,6 @@ public class Health : MonoBehaviour
     {
         yield return new WaitForSeconds(disableDuration);
         SceneManager.GetActiveScene();
-    }
-
-    internal void TakeDamage()
-    {
-        throw new NotImplementedException();
     }
     #endregion
 }

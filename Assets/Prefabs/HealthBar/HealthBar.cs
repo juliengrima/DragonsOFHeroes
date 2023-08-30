@@ -6,38 +6,23 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     #region Champs
-    [SerializeField] Image _bar;
-    [SerializeField] float _barMax = 0.5f;
-    [SerializeField] float _barValues;
+    [SerializeField] Slider _slider;
 
-    public float BarMax { get => _barMax; }
-    public float BarValue { get => _barValues; set => _barValues = value; }
+
     #endregion
     #region Unity LifeCycle
     // Start is called before the first frame update
-    void Awake()
-    {
-        
-    }
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     #endregion
     #region Methods
-    void FixedUpdate ()
+    public void SetHealth(int health)
     {
-        
+        _slider.value = health;
     }
-    void LateUpdate ()
+    public void SetMaxHealth(int health)
     {
-        
+        _slider.maxValue = health;
+        //_slider.value = health;
     }
     #endregion
     #region Coroutines
