@@ -1,0 +1,1834 @@
+fileFormatVersion: 2
+guid: a0d3a87fd88c97541aacda314d7e1b6b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: glassehours_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 249.75
+        width: 44.857143
+        height: 83.25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d501b6752330d0459faa0646f6af057
+      internalID: 544592031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 250
+        width: 61
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304f61e726cff1742829a4b89a611444
+      internalID: 1007315214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 258
+        width: 48
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695ca0e995967bc4b8cf6d174dc62541
+      internalID: -338809852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 260
+        width: 42
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c834c2f4050ef46aed35721ee37ce5
+      internalID: 1541031816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_4
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 269
+        width: 44
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967dabeb11b435940abedeeb562f4083
+      internalID: 285086241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_5
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 266
+        width: 37
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fbd5c075400f944aee42f64ed97bb2
+      internalID: 1098457587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_6
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 270
+        width: 40
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44d1ed4ee1ee5e4cb7b71da66a77bb4
+      internalID: 1879606502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_7
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 272
+        width: 35
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7041454432af45341abf25869e4261dd
+      internalID: -710783092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_8
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 274
+        width: 35
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c56881d1615bd4e95b45e595c32d79
+      internalID: 1386697962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_9
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 272
+        width: 41
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed3b1be301dcf14c93279357d198d28
+      internalID: -1469869570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_10
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 272
+        width: 40
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6536e0a7d8d4af2448053c7025d8789d
+      internalID: 1035863237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_11
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 270
+        width: 38
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f9e0d712255064fb2dd279daccce0a
+      internalID: 1921977846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_12
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 270
+        width: 38
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07d74bbb9d7dca43843d3351c609f88
+      internalID: 1205346484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_13
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 270
+        width: 37
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8daed1bb3c6f34ea4dbca31c70caf0
+      internalID: 361841636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_14
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 269
+        width: 39
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfec587fb14ff2743beaf0517c15159a
+      internalID: -864650177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_15
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 270
+        width: 39
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cd9072a915e7a42b14fb84fa717d94
+      internalID: 263136305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_16
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 272
+        width: 39
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b7365e99e5b414e97dd3f8b6171671
+      internalID: 1202235441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_17
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 273
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b0884bf6bc61b4e9e32e7a6a956316
+      internalID: -123796032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_18
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 270
+        width: 39
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59522e75f8a056747a1cce779b988dda
+      internalID: -419584492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_19
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 273
+        width: 41
+        height: 60
+      alignment: 9
+      pivot: {x: 0.48637173, y: 0.42125216}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac4853d444971f4aa41d193147a7bc3
+      internalID: 754649190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_20
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 167
+        width: 34
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e6cae20f656534ebd57a581c774ec6
+      internalID: 1711433838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_21
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 167
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f364b0e55410d4991c9425d220ebca
+      internalID: -407276905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_22
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 167
+        width: 34
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca66e4b4a0355524c96cd568c1cc3382
+      internalID: -721407450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_23
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 168
+        width: 39
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf314eaeece6b6942a079fc1247eddbd
+      internalID: 1060205649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_24
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 173
+        width: 39
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0c6c46c0d07b546b30dabbe593f210
+      internalID: -657967275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_25
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 174
+        width: 38
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af999560be799f34cb5f1319932c760e
+      internalID: -25893668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_26
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 177
+        width: 32
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64dec55500cea5142aba76b49d508930
+      internalID: 1688167005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_27
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 170
+        width: 38
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec03dc43c75b0fe4188739b1cf743437
+      internalID: -1683321253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_28
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 167
+        width: 32
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4353986f8f8ea7d45b9028dbd87e491d
+      internalID: 1885237064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_29
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 168
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18988ba54b4027c4082632f3bd766a8b
+      internalID: 126283386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_30
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 166
+        width: 36
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87faea955f98d847917909f8a7ad599
+      internalID: 972255122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_31
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 168
+        width: 38
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73f6ea5917de1a488b9b34340a47cba
+      internalID: 1978756778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_32
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 166
+        width: 37
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdd2ff3493649a4aa04bbc9c2a79fb7
+      internalID: 1421454660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_33
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 168
+        width: 38
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6356d3da03aa594ebcf08a2ef4b612e
+      internalID: 1169002174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_34
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 168
+        width: 43
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5a01a875ceab44c8dd98369271d163
+      internalID: -1512232045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_35
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 69
+        width: 12
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680503629555e1f40863d83435f8012a
+      internalID: -275999620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_36
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 167
+        width: 37
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffe16788ee5311488db755719fbc2e9
+      internalID: 592529039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_37
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 63
+        width: 11
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1829301b0022ba24e92de162549a6f12
+      internalID: -8032114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_38
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 167
+        width: 33
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd92ec706a65bef47b0bb81e075c2109
+      internalID: -490281436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_39
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 172
+        width: 32
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d589e7a1abfe143b5dfac1b313ab98
+      internalID: -54443140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_40
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 172
+        width: 35
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e9af1c0b0d70a409fb49a67535d39c
+      internalID: 655054300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_41
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 172
+        width: 32
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3adcf89628b1fb7449af6b783536ddea
+      internalID: 1174762818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_42
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 84
+        width: 46
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225d493c8a8de1b4982278ef1c7739ef
+      internalID: -668868538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_43
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 77
+        width: 47
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aeb961a118ffb74fba1f32f40bf5f92
+      internalID: 1975669703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_44
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 78
+        width: 34
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0955cd125447a3c45922148193f51ad0
+      internalID: -1911842035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_45
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 79
+        width: 38
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19815b89f9fb07459b908774e83f789
+      internalID: 1572499280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_46
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 77
+        width: 43
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c41f31e14f20944851d872080d2973
+      internalID: -414850603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_47
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 81
+        width: 36
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82db4e2e2f5e130489f866415f2d29de
+      internalID: -219117097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_48
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 79
+        width: 45
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ce0b96a548c5c43844fe244f8b853d
+      internalID: -1966006980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_49
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 80
+        width: 36
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36183cf750167642b4ead8e26ab658a
+      internalID: 2002428044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_50
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 78
+        width: 45
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8b26e4907db8245bd9df37cfeae1a5
+      internalID: 1418032803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_51
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 77
+        width: 35
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1411a786ec8a94841b699aca5fff12f1
+      internalID: -308454677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_52
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 78
+        width: 38
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be11056169211974c8a89ac7bc5f2f37
+      internalID: 1783808222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_53
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 79
+        width: 45
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54570d8c055051d4594d70f2132bc88b
+      internalID: -1409984423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_54
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 78
+        width: 45
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e01d10748e3e2140b93248244a52033
+      internalID: 1129332506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_55
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 80
+        width: 37
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74353dd58d2e24b4c91247b3387a377d
+      internalID: -99358020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_56
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 79
+        width: 40
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc5ac5994ac4ca4c89a1ef375767079
+      internalID: 2006206196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_57
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 78
+        width: 45
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b8b201447c34a47af9efff7e442a31
+      internalID: 1939489368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_58
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 72
+        width: 45
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889cf93912aa2894bbf0c3bb77fab115
+      internalID: -1622345791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_59
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 68
+        width: 45
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14325a13786d69044a0e41bf927810aa
+      internalID: 212421127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32881433fc91c134abc16060023beb54
+      internalID: 877743882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_61
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37c18da376a5d944b80826bf556c3f6
+      internalID: -1731433148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_62
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 52
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7d4fe8d4a654e479d3fcf8a16ea20d
+      internalID: 663306441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_63
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a22200df4907c4f907ecd6f441c2ab
+      internalID: 1587794425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_64
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 43
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed7ba772a64cb141b9e0f1b9b59626c
+      internalID: -284875583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_65
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 44
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ff5e67d7e2a4d48943fba8d2724d7c
+      internalID: 1837068809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_66
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 2
+        width: 36
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd42e40d3750a149a683a732c6483cc
+      internalID: 484963611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_67
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 5
+        width: 6
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a1d3011c42e3047bc02b2581d45e70
+      internalID: 218970638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_68
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 5
+        width: 17
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3c09d09ceda384c91c87347305f9d2
+      internalID: 1848717828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_69
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1
+        width: 42
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26dbc05d53b761b4eba1781dd6bb8644
+      internalID: -707257228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_70
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1
+        width: 39
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe311e7536da7a459acb42fa94ae208
+      internalID: -2058072672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_71
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1
+        width: 43
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed036d451074a504ab6229c8244d18e4
+      internalID: 1218343151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_72
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1
+        width: 42
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c5f2c579f9421448b62eecfeaa0f74
+      internalID: 452778892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_73
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1
+        width: 44
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a289af07b4963ea43a23ed2dc1a1b3fd
+      internalID: 1454533858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_74
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 0
+        width: 32
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe1fb3a982c49248b1a0b1ac7214dba
+      internalID: -1641170137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_75
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d713c47c3906b24dae8d71c177b78f5
+      internalID: 1502287642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glassehours_76
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 0
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b7f0e3a94f117345a57c060009af6f0
+      internalID: -198182504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      glassehours_0: 544592031
+      glassehours_1: 1007315214
+      glassehours_10: 1035863237
+      glassehours_11: 1921977846
+      glassehours_12: 1205346484
+      glassehours_13: 361841636
+      glassehours_14: -864650177
+      glassehours_15: 263136305
+      glassehours_16: 1202235441
+      glassehours_17: -123796032
+      glassehours_18: -419584492
+      glassehours_19: 754649190
+      glassehours_2: -338809852
+      glassehours_20: 1711433838
+      glassehours_21: -407276905
+      glassehours_22: -721407450
+      glassehours_23: 1060205649
+      glassehours_24: -657967275
+      glassehours_25: -25893668
+      glassehours_26: 1688167005
+      glassehours_27: -1683321253
+      glassehours_28: 1885237064
+      glassehours_29: 126283386
+      glassehours_3: 1541031816
+      glassehours_30: 972255122
+      glassehours_31: 1978756778
+      glassehours_32: 1421454660
+      glassehours_33: 1169002174
+      glassehours_34: -1512232045
+      glassehours_35: -275999620
+      glassehours_36: 592529039
+      glassehours_37: -8032114
+      glassehours_38: -490281436
+      glassehours_39: -54443140
+      glassehours_4: 285086241
+      glassehours_40: 655054300
+      glassehours_41: 1174762818
+      glassehours_42: -668868538
+      glassehours_43: 1975669703
+      glassehours_44: -1911842035
+      glassehours_45: 1572499280
+      glassehours_46: -414850603
+      glassehours_47: -219117097
+      glassehours_48: -1966006980
+      glassehours_49: 2002428044
+      glassehours_5: 1098457587
+      glassehours_50: 1418032803
+      glassehours_51: -308454677
+      glassehours_52: 1783808222
+      glassehours_53: -1409984423
+      glassehours_54: 1129332506
+      glassehours_55: -99358020
+      glassehours_56: 2006206196
+      glassehours_57: 1939489368
+      glassehours_58: -1622345791
+      glassehours_59: 212421127
+      glassehours_6: 1879606502
+      glassehours_60: 877743882
+      glassehours_61: -1731433148
+      glassehours_62: 663306441
+      glassehours_63: 1587794425
+      glassehours_64: -284875583
+      glassehours_65: 1837068809
+      glassehours_66: 484963611
+      glassehours_67: 218970638
+      glassehours_68: 1848717828
+      glassehours_69: -707257228
+      glassehours_7: -710783092
+      glassehours_70: -2058072672
+      glassehours_71: 1218343151
+      glassehours_72: 452778892
+      glassehours_73: 1454533858
+      glassehours_74: -1641170137
+      glassehours_75: 1502287642
+      glassehours_76: -198182504
+      glassehours_8: 1386697962
+      glassehours_9: -1469869570
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
