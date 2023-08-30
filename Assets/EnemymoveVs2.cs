@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class EnemyMove : MonoBehaviour
+public class EnemymoveVs2 : MonoBehaviour
 {
-
     //call instance
     [SerializeField] InputActionReference _moveInput;
     [SerializeField] Rigidbody2D _rb;
@@ -52,7 +51,7 @@ public class EnemyMove : MonoBehaviour
         {
             _animator.SetBool("Idle", true);
         }
-        
+
         else
 
 
@@ -76,6 +75,3 @@ public class EnemyMove : MonoBehaviour
     }
 
 }
-
-
-
