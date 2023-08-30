@@ -12,11 +12,13 @@ public class CharacterAttack : MonoBehaviour
     [SerializeField] Animator _animator;
     [SerializeField] AudioSource _punchSound;
 
+    [SerializeField] int _damage;
+
     private void Update()
     {
 
 
-        //On check le bouton d' atttack quivient d'être enfoncé
+        //On check le bouton d' atttack qui vient d'être enfoncé
 
         if (_attackInput.action.WasPressedThisFrame())
         {
@@ -24,7 +26,7 @@ public class CharacterAttack : MonoBehaviour
             // C'est le cas où on parcours la liste des colliders détectés
             //Et sur chaque collider on choppe le composant Health et on appelle
             //takeDamage dessus.
-
+ 
 
             foreach (Collider2D col in _hitZone.Colliders)
             {
@@ -34,7 +36,7 @@ public class CharacterAttack : MonoBehaviour
                 //Le composant Health est au même endroit que le RB de notre enemi
 
                 Health h = col.attachedRigidbody.GetComponent<Health>();
-                h.TakeDamage();
+                h.TakeDamage(_damage);
 
                 {
 
