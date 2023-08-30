@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -86,6 +87,11 @@ public class Health : MonoBehaviour
     {
         yield return new WaitForSeconds(disableDuration);
         SceneManager.GetActiveScene();
+    }
+
+    internal void TakeDamage()
+    {
+        throw new NotImplementedException();
     }
     #endregion
 }
