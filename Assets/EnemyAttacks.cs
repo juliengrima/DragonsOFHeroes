@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CharacterAttack : MonoBehaviour
+public class EnemyAttacks : MonoBehaviour
 {
 
     [SerializeField] InputActionReference _attackInput;
-    [SerializeField] HitZone _hitZone;
+    [SerializeField] HeatZone _hitZone;
 
     [SerializeField] Animator _animator;
     [SerializeField] AudioSource _punchSound;
