@@ -13,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground_Checker
   - Player
   - Enemy
   - PNJ
@@ -38,7 +38,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Wall
   m_SortingLayers:
   - name: Default
     uniqueID: 0
