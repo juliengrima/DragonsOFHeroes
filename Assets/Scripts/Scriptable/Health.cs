@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     #region Champs
+    [Header("Components")]
+    [SerializeField] HealthBar _healthBar;
     [Header("Health")]
     [SerializeField] int _startHealth;
     [SerializeField] int _startHealthMax;
@@ -38,6 +40,14 @@ public class Health : MonoBehaviour
     private void Start()
     {
         _effect.Invoke();
+        _healthBar.SetMaxHealth(_startHealthMax);
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            TakeDamage(20);
+        }
     }
     #endregion
     #region Methods
@@ -46,7 +56,7 @@ public class Health : MonoBehaviour
         if (IsDammageable == false) return;
 
         _startHealth -= amount;
-
+        _healthBar.SetHealth(_startHealth);
         if (_startHealth <= 0)
         {
             if (_isPlayer == true)
