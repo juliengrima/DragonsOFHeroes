@@ -20,6 +20,7 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
+        // L'IA n'a pas de manette, il a pas de touche assigné à son comportement
         var dir = _moveInput.action.ReadValue<Vector2>();
         _rb.velocity = dir * _speed;
 
@@ -50,27 +51,27 @@ public class EnemyMove : MonoBehaviour
 
         if (dir.magnitude > 0)    // Direction de la magnitude au carré triangle rectancle pythagore
         {
-            _animator.SetBool("Idle", true);
+            //_animator.SetBool("Idle", true);
         }
         
         else
 
 
         {
-            _animator.SetBool("Idle", false);
+            //_animator.SetBool("Idle", false);
         }
 
 
         if (dir.magnitude > 0)    // Direction de la magnitude au carré triangle rectancle pythagore
         {
-            _animator.SetBool("Walk", true);
+            //_animator.SetBool("Walk", true);
         }
 
         else
 
 
         {
-            _animator.SetBool("Walk", false);
+            //_animator.SetBool("Walk", false);
         }
 
 
