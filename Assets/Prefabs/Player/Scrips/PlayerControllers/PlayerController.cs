@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject PlayerGameObject;
     [Header("Actions_Informations")]
     [SerializeField] float _speed;
-    [SerializeField] float _Running;
+    [SerializeField] float _running;
 
     Vector2 velocity;
     bool _isButtonPressed;
@@ -37,8 +37,8 @@ public class PlayerController : MonoBehaviour
     }
     private void Reset()
     {
-        _speed = 5f;
-        _Running = 8f;
+        _speed = 8f;
+        _running = 12f;
     }
     #endregion
     #region LifeCycle
@@ -66,10 +66,14 @@ public class PlayerController : MonoBehaviour
     #region Methods
     void Mouvements(float XYaxis)
     {
+        //Recuperation du scale du player en cas de modifications
         float scale = __playerScale.localScale.x;
-        Debug.Log(scale);
+        // multiplication de _speed par scale puis division par la diff
+        var speed = (_speed * scale) / 1.5f;
+        var running = (_running * scale) / 1.7f;
+        //La vitesse du player se modifiera et s'adaptera aux modif du Scale de X
         Vector2 direction = _move.action.ReadValue<Vector2>();
-        _rb.velocity = direction * _speed;
+        _rb.velocity = direction * speed;
         _animator.SetFloat("MoveSpeed", Mathf.Abs(XYaxis));
 
         if (direction.magnitude < 0)
@@ -84,7 +88,7 @@ public class PlayerController : MonoBehaviour
         _isButtonPressed = _run.action.IsPressed();
         if (_isButtonPressed)
         {
-            _rb.velocity = direction * _Running;
+            _rb.velocity = direction * _running;
             _animator.SetBool("IsRunningBool", true);   
         }
         else

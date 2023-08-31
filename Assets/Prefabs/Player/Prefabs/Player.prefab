@@ -315,16 +315,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 8651747597680214584}
+  __playerScale: {fileID: 1578380011613452189}
+  _audios: {fileID: 3960497360619725884}
   _move: {fileID: -6676181861390701293, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
   _run: {fileID: 6695007592220605996, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
   _jump: {fileID: -3200172367332585969, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
   _fight: {fileID: 6137774003240397, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
   _fightCollider2D: {fileID: 5132365892098942567}
-  _audios: {fileID: 3960497360619725884}
   _animator: {fileID: 4054921294002253182}
   PlayerGameObject: {fileID: 2350409590130208185}
-  _speed: 5
-  _Running: 8
+  _speed: 8
+  _running: 12
 --- !u!114 &8095402362631132812
 MonoBehaviour:
   m_ObjectHideFlags: 0

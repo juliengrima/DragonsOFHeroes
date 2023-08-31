@@ -7,7 +7,7 @@ public class CharacterAttack : MonoBehaviour
 {
 
     [SerializeField] InputActionReference _attackInput;
-    [SerializeField] HitZone _hitZone;
+    //[SerializeField] HitZone _hitZone;
 
     [SerializeField] Animator _animator;
     [SerializeField] AudioSource _punchSound;
@@ -29,20 +29,20 @@ public class CharacterAttack : MonoBehaviour
             //takeDamage dessus.
 
 
-            foreach (Collider2D col in _hitZone.Colliders)
-            {
+            //foreach (Collider2D col in _hitZone.Colliders)
+            //{
 
-                Debug.Log($"attack {col.attachedRigidbody.name}");
+            //    Debug.Log($"attack {col.attachedRigidbody.name}");
 
-                //Le composant Health est au m�me endroit que le RB de notre enemi
+            //    //Le composant Health est au m�me endroit que le RB de notre enemi
 
-                Health h = col.attachedRigidbody.GetComponent<Health>();
-                h.TakeDamage(_damage);
+            //    Health h = col.attachedRigidbody.GetComponent<Health>();
+            //    h.TakeDamage(_damage);
 
-                {
+            //    {
 
-                }
-            }
+            //    }
+            //}
 
         }
     }
