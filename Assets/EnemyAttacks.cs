@@ -1,48 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine;
 
-public class EnemyAttacks : MonoBehaviour
+using System.Collections;
+
+
+public class EnemyAttack : MonoBehaviour
 {
-
-    [SerializeField] InputActionReference _attackInput;
-    [SerializeField] HeatZone _hitZone;
-
-    [SerializeField] Animator _animator;
-    [SerializeField] AudioSource _punchSound;
-
+    #region Champs
+    [Header("Components")]
+    [SerializeField] Collider2D _attack;
+    [SerializeField] Collider2D _body;
+    [Header("Fields")]
     [SerializeField] int _damage;
 
-    private void Update()
+    bool _collider2d;
+    #endregion
+    #region Unity LifeCycle
+    // Start is called before the first frame update
+    // Update is called once per frame
+    #endregion
+    #region Methods
+    
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
-
-        //On check le bouton d' atttack qui vient d'être enfoncé
-
-        if (_attackInput.action.WasPressedThisFrame())
+        if (collision.TryGetComponent(out Health health))
         {
-
-            // C'est le cas où on parcours la liste des colliders détectés
-            //Et sur chaque collider on choppe le composant Health et on appelle
-            //takeDamage dessus.
- 
-
-            foreach (Collider2D col in _hitZone.Colliders)
-            {
-
-                Debug.Log($"attack {col.attachedRigidbody.name}");
-
-                //Le composant Health est au même endroit que le RB de notre enemi
-
-                Health h = col.attachedRigidbody.GetComponent<Health>();
-                h.TakeDamage(_damage);
-
-                {
-
-                }
-            }
-
+            health.TakeDamage(_damage);
         }
     }
+    #endregion
+    #region Coroutines
+    #endregion
 }

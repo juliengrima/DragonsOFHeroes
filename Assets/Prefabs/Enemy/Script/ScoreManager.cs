@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour
     internal void AddScore(int count)
     {
         _score += count;
-        _scoreText.text = _score.ToString();
+        _scoreText.text = _score.ToString(); // Si il y'a 100 à l' intérieur transformation en texte 100
 
         Debug.Log($" Score : {_score}");
     }

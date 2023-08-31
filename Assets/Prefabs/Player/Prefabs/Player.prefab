@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6371240767372997032}
   - component: {fileID: 1033757157525311003}
-  - component: {fileID: 3360846065732034906}
+  - component: {fileID: 5795517667735393648}
   m_Layer: 7
   m_Name: w
   m_TagString: Untagged
@@ -119,7 +119,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3360846065732034906
+--- !u!114 &5795517667735393648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,9 +128,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 923150865170482252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ce0d33f9fe51ab40886c3a8764d0e22, type: 3}
+  m_Script: {fileID: 11500000, guid: c51532f6efe613d4882ad659acff1099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _colliders: []
 --- !u!1 &1398004515935778899
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +289,7 @@ Transform:
   - {fileID: 3104513698728664065}
   - {fileID: 159015487694251819}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8651747597680214584
 Rigidbody2D:
@@ -305,7 +306,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -367,8 +368,8 @@ MonoBehaviour:
   _audios: {fileID: 3960497360619725884}
   _animator: {fileID: 4054921294002253182}
   PlayerGameObject: {fileID: 2350409590130208185}
-  _speed: 5
-  _Running: 8
+  _speed: 80
+  _Running: 80
 --- !u!114 &8095402362631132812
 MonoBehaviour:
   m_ObjectHideFlags: 0
