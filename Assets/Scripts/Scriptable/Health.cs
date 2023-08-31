@@ -11,8 +11,8 @@ public class Health : MonoBehaviour
     [Header("Components")]
     [SerializeField] HealthBar _healthBar;
     [Header("Health")]
-    [SerializeField] int _startHealth;
     [SerializeField] int _startHealthMax;
+    [SerializeField] int _startHealth;
     [Header("Scores")]
     [SerializeField] int _scoreOnDeath;
     [SerializeField] int _scoreOnLife;
@@ -41,6 +41,13 @@ public class Health : MonoBehaviour
     {
         _effect.Invoke();
         _healthBar.SetMaxHealth(_startHealthMax);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            TakeDamage(20);
+        }
     }
     #endregion
     #region Methods
@@ -71,9 +78,11 @@ public class Health : MonoBehaviour
         if (_startHealth > 0 && _startHealth < _startHealthMax)
         {
             _startHealth += amount;
+            _healthBar.SetHealth(_startHealth);
             if (_startHealth > _startHealthMax)
             {
                 _startHealth = _startHealthMax;
+                _healthBar.SetHealth(_startHealth);
                 //ScoreManager.Instance.AddScore(_scoreOnLife);
             }
         }  
@@ -90,7 +99,7 @@ public class Health : MonoBehaviour
     public IEnumerator loadingScene()
     {
         yield return new WaitForSeconds(disableDuration);
-        SceneManager.GetActiveScene();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     #endregion
 }

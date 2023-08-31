@@ -7,7 +7,8 @@ public class HealthBar : MonoBehaviour
 {
     #region Champs
     [SerializeField] Slider _slider;
-
+    [SerializeField] Gradient _gradient;
+    [SerializeField] Image _fill;
 
     #endregion
     #region Unity LifeCycle
@@ -15,14 +16,16 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     #endregion
     #region Methods
-    public void SetHealth(int health)
-    {
-        _slider.value = health;
-    }
     public void SetMaxHealth(int health)
     {
         _slider.maxValue = health;
-        //_slider.value = health;
+        _slider.value = health;
+        _fill.color = _gradient.Evaluate(1f);
+    }
+    public void SetHealth(int health)
+    {
+        _slider.value = health;
+        _fill.color = _gradient.Evaluate(_slider.normalizedValue);
     }
     #endregion
     #region Coroutines

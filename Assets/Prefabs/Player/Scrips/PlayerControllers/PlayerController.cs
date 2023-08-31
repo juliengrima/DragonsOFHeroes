@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Instance != null)
         {
-            Debug.LogError("OMG");
+            Debug.LogError("Ganylene/Aïrynn/Wyllialys");
         }
 
         Instance = this;
