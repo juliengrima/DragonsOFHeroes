@@ -7,7 +7,7 @@ TagManager:
   - FxTemporaire
   - Ground
   - Enemy
-  - Boss1
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -15,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground_Checker
   - Player
   - Enemy
   - PNJ
@@ -26,6 +26,7 @@ TagManager:
   - Boss
   - 
   - 
+  - HitBox
   - 
   - 
   - 
@@ -39,8 +40,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Wall
   m_SortingLayers:
   - name: Default
     uniqueID: 0
