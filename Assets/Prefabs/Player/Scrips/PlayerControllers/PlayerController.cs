@@ -8,14 +8,16 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     #region Fields
-    [Header("Actions_Components")]
+    [Header("Components")]
     [SerializeField] Rigidbody2D _rb;
+    [SerializeField] Transform __playerScale;
+    [SerializeField] Audios _audios;
+    [Header("Actions_Components")]
     [SerializeField] InputActionReference _move;
     [SerializeField] InputActionReference _run;
     [SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _fight;
     [SerializeField] Attack_1_ColDisabled _fightCollider2D;
-    [SerializeField] Audios _audios;
     [Header("Animations_Components")]
     [SerializeField] Animator _animator;
     [SerializeField] GameObject PlayerGameObject;
@@ -63,7 +65,9 @@ public class PlayerController : MonoBehaviour
     #endregion
     #region Methods
     void Mouvements(float XYaxis)
-    { 
+    {
+        float scale = __playerScale.localScale.x;
+        Debug.Log(scale);
         Vector2 direction = _move.action.ReadValue<Vector2>();
         _rb.velocity = direction * _speed;
         _animator.SetFloat("MoveSpeed", Mathf.Abs(XYaxis));
