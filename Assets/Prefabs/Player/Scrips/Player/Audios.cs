@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class Audios : MonoBehaviour
 {
+    // collects all the audio clips for the player or enemy
     #region Champs
     [Header("Sources")]
-    [SerializeField] AudioSource _source;
+    [SerializeField] AudioSource _source; //Give an audio source to play clips
     [Header("Clips Audio")]
     [SerializeField] AudioClip[] _audioFight;
     [SerializeField] AudioClip _audioJump;
@@ -20,6 +21,7 @@ public class Audios : MonoBehaviour
     // Update is called once per frame
     #endregion
     #region Methods
+    // Playable audiosource function 
     internal void Jump()
     {
         _source.PlayOneShot(_audioJump);

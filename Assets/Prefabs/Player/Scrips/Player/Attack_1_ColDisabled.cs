@@ -18,6 +18,8 @@ public class Attack_1_ColDisabled : MonoBehaviour
     // Update is called once per frame
     #endregion
     #region Methods
+    // Enable or Disable collider for Fight action
+    //Attack Collider
     public void ColEnabled()
     {
         var collider = _attack.GetComponentInChildren<CircleCollider2D>();
@@ -28,6 +30,7 @@ public class Attack_1_ColDisabled : MonoBehaviour
         var collider = _attack.GetComponentInChildren<CircleCollider2D>();
         collider.enabled = false;
     }
+    //Body Collider
     public void ColBodyEnabled()
     {
         var collider = _body.GetComponentInChildren<CapsuleCollider2D>();
@@ -39,7 +42,7 @@ public class Attack_1_ColDisabled : MonoBehaviour
         collider.enabled = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) //Get Health script to give damage
     {
         if (collision.TryGetComponent(out Health health))
         {

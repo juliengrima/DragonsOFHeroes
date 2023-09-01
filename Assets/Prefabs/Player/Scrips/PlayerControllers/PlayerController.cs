@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference _run;
     [SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _fight;
-    [SerializeField] Attack_1_ColDisabled _fightCollider2D;
     [Header("Animations_Components")]
     [SerializeField] Animator _animator;
     [SerializeField] GameObject PlayerGameObject;
@@ -28,12 +27,14 @@ public class PlayerController : MonoBehaviour
     [Header("Actions_Informations")]
     [SerializeField] float _speed;
     [SerializeField] float _running;
+    [SerializeField] Attack_1_ColDisabled _fightCollider2D;
 
     Coroutine _coroutine;
     bool _isButtonPressed;
     int fightCounter = 0;
     #endregion
     #region Instances
+    // Instance of controllers
     public static PlayerController Instance 
     { 
         get; private set; 
@@ -45,11 +46,13 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
     #region LifeCycle
+    // LifeCicle of the instance of action per frame
     private void Awake()
     {
         if(Instance != null)
         {
-            Debug.Log("Ganylène/Aïrynn/Wyllialys");
+            //Debug.Log("Ganylène/Aïrynn/Wyllialys");
+            return;
         }
 
         Instance = this;
@@ -77,8 +80,9 @@ public class PlayerController : MonoBehaviour
         //La vitesse du player se modifiera et s'adaptera aux modif du Scale de X
         Vector2 direction = _move.action.ReadValue<Vector2>();
         _rb.velocity = direction * speed;
-        _animator.SetFloat("MoveSpeed", Mathf.Abs(XYaxis));
+        _animator.SetFloat("MoveSpeed", Mathf.Abs(XYaxis)); //Use Additionnal vectors of X & Y
 
+        //GamePad movement 
         if (direction.magnitude < 0)
         {
             _animator.SetFloat("MoveSpeed", Mathf.Abs(XYaxis));
@@ -87,7 +91,7 @@ public class PlayerController : MonoBehaviour
         {
             _animator.SetFloat("MoveSpeed", Mathf.Abs(XYaxis));
         }
-        //RUNNING
+        //RUNNING Ispressed
         _isButtonPressed = _run.action.IsPressed();
         if (_isButtonPressed)
         {
@@ -104,12 +108,8 @@ public class PlayerController : MonoBehaviour
         _isButtonPressed = _jump.action.WasPressedThisFrame();
         if (_isButtonPressed && _coroutine == null)
         {
+            // Use Coroutine for jump animations
             _coroutine = StartCoroutine(EnabledJump());
-        }
-        if (_coroutine != null)
-        {
-            StopCoroutine(_coroutine);
-            _coroutine = null;
         }
     }
     void Fight()
@@ -119,11 +119,12 @@ public class PlayerController : MonoBehaviour
         {
             _animator.SetTrigger("IsFighting");
 
+            //Test if player use more 3 time fight button
             if (fightCounter == 3) fightCounter = 0;
 
             fightCounter++;
-            StartCoroutine(ColEnableThenDisable());
-            if (fightCounter == 1)
+            StartCoroutine(ColEnableThenDisable()); // Disable and enable Collider for takedamage
+            if (fightCounter == 1) 
             {
                 _audios.Attack(1);
                 _animator.SetInteger("AttackNumber", 1);
@@ -167,10 +168,11 @@ public class PlayerController : MonoBehaviour
     IEnumerator EnabledJump()
     {
         _audios.Jump();
-        _fightCollider2D.ColBodyDisabled();
+        _fightCollider2D.ColBodyDisabled(); // Disable BodyCollider
         _animator.SetTrigger("IsJumping");
         yield return new WaitForSeconds(2f);
-        _fightCollider2D.ColBodyEnabled();
+        _fightCollider2D.ColBodyEnabled(); //Enable BodyCollider
+        _coroutine = null;
     }
     #endregion
 }

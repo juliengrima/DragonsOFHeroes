@@ -16,6 +16,7 @@ public class GroundChecker : MonoBehaviour
     #region Unity LifeCycle
     #endregion
     #region Methods
+    // Just to test it' onCollid with walls or Items
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ground")

@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     #region Champs
-    [SerializeField] Slider _slider;
-    [SerializeField] Gradient _gradient;
-    [SerializeField] Image _fill;
+    [SerializeField] Slider _slider; //Get vale to scale image
+    [SerializeField] Gradient _gradient; //Colors source for graduate
+    [SerializeField] Image _fill; //Image source ti get fill value
 
     #endregion
     #region Unity LifeCycle
@@ -18,13 +18,13 @@ public class HealthBar : MonoBehaviour
     #region Methods
     public void SetMaxHealth(int health)
     {
-        _slider.maxValue = health;
-        _slider.value = health;
-        _fill.color = _gradient.Evaluate(1f);
+        _slider.maxValue = health; //max value of slider
+        _slider.value = health; //Current value of slider
+        _fill.color = _gradient.Evaluate(1f); //Graduation of image's colors
     }
     public void SetHealth(int health)
     {
-        _slider.value = health;
+        _slider.value = health; //Set value of slider with currentHealth
         _fill.color = _gradient.Evaluate(_slider.normalizedValue);
     }
     #endregion

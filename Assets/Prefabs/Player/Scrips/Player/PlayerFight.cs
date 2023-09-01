@@ -14,7 +14,7 @@ public class PlayerFight : MonoBehaviour
     // Update is called once per frame
     #endregion
     #region Methods
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // Give bool true to damageable item
     {
         if (collision.attachedRigidbody == null) return;
 
@@ -23,7 +23,7 @@ public class PlayerFight : MonoBehaviour
             collision.attachedRigidbody.GetComponent<Health>().IsDammageable = true;
         }    
     }
-    public void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerExit2D(Collider2D collision) // Give bool false to damageable item
     {
         if (collision.attachedRigidbody == null) return;
 

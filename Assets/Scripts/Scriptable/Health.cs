@@ -12,12 +12,12 @@ public class Health : MonoBehaviour
     [SerializeField] HealthBar _healthBar;
     [SerializeField] Animator _animator;
     [Header("Health")]
-    [SerializeField] int _startHealth;
-    [SerializeField] int _startHealthMax;
+    [SerializeField] int _startHealth; //currentHealth
+    [SerializeField] int _startHealthMax; //MaxHealth
     [Header("Scores")]
     [SerializeField] int _scoreOnDeath;
     [SerializeField] int _scoreOnLife;
-    [SerializeField] bool _isPlayer = false;
+    [SerializeField] bool _isPlayer = false; // Is true uniquely is player 
     [Header("Effects")]
     [SerializeField] float disableDuration = 1f;
     [SerializeField] UnityEvent _effect;
@@ -35,42 +35,48 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         _startHealth = _startHealthMax;
-
         if (_isPlayer) IsDammageable = true;
     }
     private void Start()
     {
+        // Apparition effect
         _effect.Invoke();
+        // Activation of HealthBar
         _healthBar.SetMaxHealth(_startHealthMax);
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDamage(20);
-        }
+        // Enemy Simulation
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    TakeDamage(20);
+        //}
     }
     #endregion
     #region Methods
+    // Player or enemy can take damages
     public void TakeDamage(int amount)
     {
+        // security condition
         if (IsDammageable == false) return;
 
         _startHealth -= amount;
-        _animator.SetBool("HasHurted", true);
+        _animator.SetTrigger("HasHurted");
         _healthBar.SetHealth(_startHealth);
+        // Death of player or Enemy
         if (_startHealth <= 0)
         {
-            if (_isPlayer == true)
+            if (_isPlayer == true) // If is the payer
             {
-                StartCoroutine(loadingScene());    
+                StartCoroutine(loadingScene());
             }
-            else
+            else // Else is an Enemy
             {
+                // Destroy enemy ... Instance Score => ScoreManager
                 ScoreManager.Instance.AddScore(_scoreOnDeath);
+                // Enemy is dead start event
                 StartCoroutine(EnableDestroyAfterDelay());
             }
-            _effect.Invoke();
         }
     }
     public void GiveLife(int amount)
@@ -90,8 +96,11 @@ public class Health : MonoBehaviour
     #region Coroutines
     public IEnumerator EnableDestroyAfterDelay()
     {
+        // Set collider at false before event
         Collider2D collider = gameObject.GetComponent<Collider2D>();
         collider.enabled = false;
+        //Event
+        _effect.Invoke();
         yield return new WaitForSeconds(disableDuration);
         Destroy(gameObject);
     }
@@ -99,7 +108,8 @@ public class Health : MonoBehaviour
     {
         _animator.SetBool("IsDead", true);
         yield return new WaitForSeconds(disableDuration);
-        SceneManager.GetActiveScene();
+        var getScene = SceneManager.GetActiveScene();
+        //SceneManager.LoadScene();
     }
     #endregion
 }
