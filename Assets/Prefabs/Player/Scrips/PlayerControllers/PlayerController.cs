@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [Header("Actions_Components")]
     [SerializeField] InputActionReference _move;
     [SerializeField] InputActionReference _run;
-    [SerializeField] InputActionReference _jump;
+    //[SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _fight;
     [SerializeField] Attack_1_ColDisabled _fightCollider2D;
     [Header("Animations_Components")]
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     Vector2 velocity;
     bool _isButtonPressed;
     int fightCounter = 0;
-    int _jumpCounter = 3;
+    //int _jumpCounter = 0;
     #endregion
     #region Instances
     public static PlayerController Instance 
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         float yAxis = _move.action.ReadValue<Vector2>().y * _speed;     //action move dans axe y uniquement
         float XYaxis = xAxis + yAxis;                                   //addition des axes de move pour l'animation
         Mouvements(XYaxis);
-        Jump();
+        //Jump();
         Fight();
         UpdateRotation(xAxis);
     }
@@ -69,8 +69,8 @@ public class PlayerController : MonoBehaviour
         //Recuperation du scale du player en cas de modifications
         float scale = __playerScale.localScale.x;
         // multiplication de _speed par scale puis division par la diff
-        var speed = (_speed * scale) / 1.5f;
-        var running = (_running * scale) / 1.7f;
+        var speed = (_speed * scale) / 1.6f;
+        var running = (_running * scale) / 1.5f;
         //La vitesse du player se modifiera et s'adaptera aux modif du Scale de X
         Vector2 direction = _move.action.ReadValue<Vector2>();
         _rb.velocity = direction * speed;
@@ -96,24 +96,15 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("IsRunningBool", false);
         }
     }
-    void Jump()
-    {
-        _isButtonPressed = _jump.action.WasPressedThisFrame();
-        if (_isButtonPressed)
-        {
-            _audios.Jump();
-            _fightCollider2D.ColBodyDisabled();
-            _animator.SetTrigger("IsJumping");
-            for (int i = 0; i < _jumpCounter; i++)
-            {
-                _animator.SetInteger("JumpNumber", i);
-            }
-        }
-        else
-        {
-            _fightCollider2D.ColBodyEnabled();
-        }
-    }
+    //void Jump()
+    //{
+    //    _isButtonPressed = _jump.action.WasPressedThisFrame();
+    //    if (_isButtonPressed)
+    //    {
+    //        StartCoroutine(EnabledJump());
+
+    //    }
+    //}
     void Fight()
     {
         _isButtonPressed = _fight.action.WasPressedThisFrame();
@@ -165,5 +156,13 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForFixedUpdate();
         _fightCollider2D.ColDisabled();
     }
+    //IEnumerator EnabledJump()
+    //{
+    //    _audios.Jump();
+    //    _fightCollider2D.ColBodyDisabled();
+    //    _animator.SetTrigger("IsJumping");
+    //    yield return new WaitForSeconds(2);
+    //    _fightCollider2D.ColBodyEnabled();
+    //}
     #endregion
 }
