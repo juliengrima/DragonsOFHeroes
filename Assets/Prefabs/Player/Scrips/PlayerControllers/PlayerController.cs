@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [Header("Actions_Components")]
     [SerializeField] InputActionReference _move;
     [SerializeField] InputActionReference _run;
-    //[SerializeField] InputActionReference _jump;
+    [SerializeField] InputActionReference _jump;
     [SerializeField] InputActionReference _fight;
     [SerializeField] Attack_1_ColDisabled _fightCollider2D;
     [Header("Animations_Components")]
@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
     Vector2 velocity;
     bool _isButtonPressed;
     int fightCounter = 0;
-    //int _jumpCounter = 0;
     #endregion
     #region Instances
     public static PlayerController Instance 
@@ -46,7 +45,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Instance != null)
         {
-            Debug.LogError("Ganylene/Aïrynn/Wyllialys");
+            Debug.Log("Ganylène/Aïrynn/Wyllialys");
         }
 
         Instance = this;
@@ -58,7 +57,7 @@ public class PlayerController : MonoBehaviour
         float yAxis = _move.action.ReadValue<Vector2>().y * _speed;     //action move dans axe y uniquement
         float XYaxis = xAxis + yAxis;                                   //addition des axes de move pour l'animation
         Mouvements(XYaxis);
-        //Jump();
+        Jump();
         Fight();
         UpdateRotation(xAxis);
     }
@@ -88,7 +87,7 @@ public class PlayerController : MonoBehaviour
         _isButtonPressed = _run.action.IsPressed();
         if (_isButtonPressed)
         {
-            _rb.velocity = direction * _running;
+            _rb.velocity = direction * running;
             _animator.SetBool("IsRunningBool", true);   
         }
         else
@@ -96,15 +95,15 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("IsRunningBool", false);
         }
     }
-    //void Jump()
-    //{
-    //    _isButtonPressed = _jump.action.WasPressedThisFrame();
-    //    if (_isButtonPressed)
-    //    {
-    //        StartCoroutine(EnabledJump());
+    void Jump()
+    {
+        _isButtonPressed = _jump.action.WasPressedThisFrame();
+        if (_isButtonPressed)
+        {
+            StartCoroutine(EnabledJump());
 
-    //    }
-    //}
+        }
+    }
     void Fight()
     {
         _isButtonPressed = _fight.action.WasPressedThisFrame();
@@ -130,8 +129,7 @@ public class PlayerController : MonoBehaviour
             else if (fightCounter == 3)
             {
                 _audios.Attack(3);
-                _animator.SetInteger("AttackNumber", 3);
-                
+                _animator.SetInteger("AttackNumber", 3);      
             }
         }
     }
@@ -156,13 +154,13 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForFixedUpdate();
         _fightCollider2D.ColDisabled();
     }
-    //IEnumerator EnabledJump()
-    //{
-    //    _audios.Jump();
-    //    _fightCollider2D.ColBodyDisabled();
-    //    _animator.SetTrigger("IsJumping");
-    //    yield return new WaitForSeconds(2);
-    //    _fightCollider2D.ColBodyEnabled();
-    //}
+    IEnumerator EnabledJump()
+    {
+        _audios.Jump();
+        _fightCollider2D.ColBodyDisabled();
+        _animator.SetTrigger("IsJumping");
+        yield return new WaitForSeconds(2f);
+        _fightCollider2D.ColBodyEnabled();
+    }
     #endregion
 }

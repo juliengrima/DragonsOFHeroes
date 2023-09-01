@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerFight : MonoBehaviour
 {
     #region Champs
+    [SerializeField] List<Collider2D> _colliders;
+
+    public List<Collider2D> Colliders { get => _colliders; }
     #endregion
     #region Unity LifeCycle
     // Start is called before the first frame update
