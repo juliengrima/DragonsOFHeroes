@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -21,11 +22,14 @@ public class PlayerController : MonoBehaviour
     [Header("Animations_Components")]
     [SerializeField] Animator _animator;
     [SerializeField] GameObject PlayerGameObject;
+    [SerializeField] UnityEvent _event_1;
+    [SerializeField] UnityEvent _event_2;
+    [SerializeField] UnityEvent _event_3;
     [Header("Actions_Informations")]
     [SerializeField] float _speed;
     [SerializeField] float _running;
 
-    Vector2 velocity;
+    Coroutine _coroutine;
     bool _isButtonPressed;
     int fightCounter = 0;
     #endregion
@@ -98,10 +102,14 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         _isButtonPressed = _jump.action.WasPressedThisFrame();
-        if (_isButtonPressed)
+        if (_isButtonPressed && _coroutine == null)
         {
-            StartCoroutine(EnabledJump());
-
+            _coroutine = StartCoroutine(EnabledJump());
+        }
+        if (_coroutine != null)
+        {
+            StopCoroutine(_coroutine);
+            _coroutine = null;
         }
     }
     void Fight()
@@ -119,17 +127,19 @@ public class PlayerController : MonoBehaviour
             {
                 _audios.Attack(1);
                 _animator.SetInteger("AttackNumber", 1);
+                _event_1.Invoke();
             }
             else if (fightCounter == 2)
             {
                 _audios.Attack(2);
                 _animator.SetInteger("AttackNumber", 2);
-                
+                _event_2.Invoke();
             }
             else if (fightCounter == 3)
             {
                 _audios.Attack(3);
-                _animator.SetInteger("AttackNumber", 3);      
+                _animator.SetInteger("AttackNumber", 3);
+                _event_3.Invoke();
             }
         }
     }

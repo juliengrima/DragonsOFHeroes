@@ -324,6 +324,15 @@ MonoBehaviour:
   _fightCollider2D: {fileID: 5132365892098942567}
   _animator: {fileID: 4054921294002253182}
   PlayerGameObject: {fileID: 2350409590130208185}
+  _event_1:
+    m_PersistentCalls:
+      m_Calls: []
+  _event_2:
+    m_PersistentCalls:
+      m_Calls: []
+  _event_3:
+    m_PersistentCalls:
+      m_Calls: []
   _speed: 8
   _running: 12
 --- !u!114 &8095402362631132812
@@ -339,6 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthBar: {fileID: 3096382466571743077}
+  _animator: {fileID: 4054921294002253182}
   _startHealth: 100
   _startHealthMax: 100
   _scoreOnDeath: 200
@@ -440,6 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa496199b27f041889cc6415fc91534e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _colliders: []
 --- !u!114 &5132365892098942567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +466,37 @@ MonoBehaviour:
   _attack: {fileID: 7112026626544250404}
   _body: {fileID: 5647243937476448531}
   _damage: 20
+--- !u!1 &3845293489078758818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7060528054290306080}
+  m_Layer: 7
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7060528054290306080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3845293489078758818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6360032901285856809}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4598083814509372707
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +578,7 @@ Transform:
   - {fileID: 8754708351704397072}
   - {fileID: 8706290948976931460}
   - {fileID: 1562450235686876472}
+  - {fileID: 7060528054290306080}
   m_Father: {fileID: 1578380011613452189}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

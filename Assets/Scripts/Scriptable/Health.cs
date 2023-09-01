@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     #region Champs
     [Header("Components")]
     [SerializeField] HealthBar _healthBar;
+    [SerializeField] Animator _animator;
     [Header("Health")]
     [SerializeField] int _startHealth;
     [SerializeField] int _startHealthMax;
@@ -56,6 +57,7 @@ public class Health : MonoBehaviour
         if (IsDammageable == false) return;
 
         _startHealth -= amount;
+        _animator.SetBool("HasHurted", true);
         _healthBar.SetHealth(_startHealth);
         if (_startHealth <= 0)
         {
@@ -79,7 +81,8 @@ public class Health : MonoBehaviour
             if (_startHealth > _startHealthMax)
             {
                 _startHealth = _startHealthMax;
-                //ScoreManager.Instance.AddScore(_scoreOnLife);
+                ScoreManager.Instance.AddScore(_scoreOnLife);
+                _effect.Invoke();
             }
         }  
     }
@@ -94,13 +97,9 @@ public class Health : MonoBehaviour
     }
     public IEnumerator loadingScene()
     {
+        _animator.SetBool("IsDead", true);
         yield return new WaitForSeconds(disableDuration);
         SceneManager.GetActiveScene();
-    }
-
-    internal void TakeDamage()
-    {
-        throw new NotImplementedException();
     }
     #endregion
 }
