@@ -13,12 +13,17 @@ public class MoveTowardPlayer : MonoBehaviour
     {
         if (PlayerController.Instance == null) return;
 
-        GameObject.Find("Player");
-
-
         var dir = (PlayerController.Instance.transform.position - transform.position).normalized;
 
-        _rb.velocity = dir * _speed;
+        if (dir.magnitude < 2f)
+        {
+            _rb.velocity = Vector3.zero;
+        }
+        else
+        {
+            _rb.velocity = dir * _speed;
+        }
+
 
     }
 

@@ -15,35 +15,23 @@ public class CharacterAttack : MonoBehaviour
     [Header("Fields")]
     [SerializeField] int _damage;
 
-    private void Update()
+    private void FixedUpdate()
     {
-
-
-        //On check le bouton d' atttack quivient d'�tre enfonc�
-
+        // On verifie si le bouton d'attaque vient d'etre enfonce
         if (_attackInput.action.WasPressedThisFrame())
         {
-
-            // C'est le cas o� on parcours la liste des colliders d�tect�s
-            //Et sur chaque collider on choppe le composant Health et on appelle
-            //takeDamage dessus.
-
-
+            // C'est le cas, on parcourt la liste des colliders detectes
+            // Et sur chaque collider on recupere le composant Health et on appelle
+            // takeDamage dessus.
             foreach (Collider2D col in _hitZone.Colliders)
             {
-
                 Debug.Log($"attack {col.attachedRigidbody.name}");
 
-                //Le composant Health est au m�me endroit que le RB de notre enemi
-
+                // Le composant Health est au meme endroit que le RB de notre ennemi
                 Health h = col.attachedRigidbody.GetComponent<Health>();
                 h.TakeDamage(_damage);
-
-                {
-
-                }
             }
-
         }
     }
+
 }

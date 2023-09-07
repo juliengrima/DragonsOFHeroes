@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -13,13 +14,24 @@ public class Health : MonoBehaviour
     [SerializeField] int _startHealthMax;
     [Header("Scores")]
     [SerializeField] int _scoreOnDeath;
+
+    public Health(int scoreOnDeath)
+    {
+        _scoreOnDeath = scoreOnDeath;
+    }
+
     [SerializeField] int _scoreOnLife;
     [SerializeField] bool _isPlayer = false;
     [Header("Effects")]
     [SerializeField] float disableDuration = 1f;
     [SerializeField] UnityEvent _effect;
 
+    [SerializeField] Slider _slider;
+
+   
+
     public bool IsDammageable { get; set; }
+    public bool IsPlayer { get; internal set; }
     #endregion
     #region Unity LifeCycle
     private void Reset()
@@ -38,6 +50,7 @@ public class Health : MonoBehaviour
     private void Start()
     {
         _effect.Invoke();
+        if(_slider !=null) _slider.value = _startHealth;
     }
     #endregion
     #region Methods
@@ -46,6 +59,7 @@ public class Health : MonoBehaviour
         if (IsDammageable == false) return;
 
         _startHealth -= amount;
+        if (_slider != null) _slider.value = _startHealth;
 
         if (_startHealth <= 0)
         {
@@ -67,6 +81,7 @@ public class Health : MonoBehaviour
         if (_startHealth > 0 && _startHealth < _startHealthMax)
         {
             _startHealth += amount;
+            if (_slider != null) _slider.value = _startHealth;
             if (_startHealth > _startHealthMax)
             {
                 _startHealth = _startHealthMax;
@@ -93,5 +108,6 @@ public class Health : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+
     #endregion
 }

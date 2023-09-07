@@ -167,7 +167,7 @@ Transform:
   m_GameObject: {fileID: 2350409590130208185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6360032901285856809}
@@ -175,7 +175,7 @@ Transform:
   - {fileID: 159015487694251819}
   - {fileID: 8706290948976931460}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8651747597680214584
 Rigidbody2D:
@@ -283,15 +283,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 8651747597680214584}
   _move: {fileID: -6676181861390701293, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
+  _run: {fileID: 0}
   _jump: {fileID: -3200172367332585969, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
   _fight: {fileID: 6137774003240397, guid: f02c741bf1c4e4b3bbf41543761bf80f, type: 3}
-  _source: {fileID: 0}
-  _AudioFight: {fileID: 0}
-  _AudioJump: {fileID: 0}
+  _fightCollider2D: {fileID: 0}
+  _audios: {fileID: 0}
   _animator: {fileID: 4054921294002253182}
-  graphics: {fileID: 5742427979402193781}
+  PlayerGameObject: {fileID: 0}
   _speed: 10
-  _jumpForce: 10
+  _Running: 0
 --- !u!1 &4598083814509372707
 GameObject:
   m_ObjectHideFlags: 0

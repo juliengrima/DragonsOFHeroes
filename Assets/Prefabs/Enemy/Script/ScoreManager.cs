@@ -10,6 +10,14 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _scoreText;
     int _score = 0;
 
+    [SerializeField] int currentscore;
+    [SerializeField] TextMeshProUGUI _TextToUpdate;
+    [SerializeField] TextMeshProUGUI _ScoreText;
+    [SerializeField] TextMeshProUGUI _PotionText;
+
+
+
+
     public static ScoreManager Instance { get; private set; }
 
     private void Awake()

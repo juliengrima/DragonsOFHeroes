@@ -8,6 +8,10 @@ TagManager:
   - Ground
   - Enemy
   - Boss
+  - Boss1
+  - Weapon
+  - Bullet
+  - Bouton
   layers:
   - Default
   - TransparentFX
